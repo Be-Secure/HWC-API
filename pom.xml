@@ -16,7 +16,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.3.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -161,7 +161,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			<version>1.7.11.RELEASE</version>
+			<version>3.2.11</version>
 		</dependency>
 		<dependency>
 			<groupId>biz.paluch.redis</groupId>
@@ -225,10 +225,9 @@
 								<echo>
 									concatinating properties file ${target-properties} and
 									${source-properties}
-										$${server-password} -->
+										$${server-password} --&gt;
 								</echo>
-								<concat destfile="${target-properties}" append="yes"
-									force="yes">
+								<concat destfile="${target-properties}" append="yes" force="yes">
 									<fileset file="${source-properties}">
 									</fileset>
 								</concat>
